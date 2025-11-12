@@ -1,0 +1,54 @@
+{
+  "experience": [
+    {
+      "company": "테크스타트업",
+      "role": "Frontend Engineer",
+      "period": "2023.03 - 현재",
+      "summary": "B2B SaaS 제품의 핵심 프론트엔드 기능을 설계하고 운영합니다.",
+      "achievements": [
+        "제품 온보딩 플로우 리뉴얼로 이탈률 20% 감소",
+        "디자인 시스템 구축으로 UI 컴포넌트 재사용률 60% 증가",
+        "웹 접근성 점수 WCAG 2.1 AA 기준 충족"
+      ]
+    },
+    {
+      "company": "데이터 플랫폼 기업",
+      "role": "Frontend Developer",
+      "period": "2021.01 - 2023.02",
+      "summary": "데이터 시각화 플랫폼 프론트엔드를 담당하며 사용자 경험을 개선했습니다.",
+      "achievements": [
+        "대용량 데이터 테이블 렌더링 최적화로 로딩 시간 50% 단축",
+        "고객 맞춤형 리포트 빌더 기능 출시, 월간 사용량 3배 증가"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "서울대학교",
+      "degree": "컴퓨터공학과 학사",
+      "period": "2015 - 2020"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "TypeScript", "Vite", "Next.js", "Redux Toolkit"]
+    },
+    {
+      "category": "UI/UX",
+      "items": ["Design System", "Storybook", "Figma"]
+    },
+    {
+      "category": "Tooling & DevOps",
+      "items": ["GitHub Actions", "ESLint", "Testing Library", "Playwright"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "정보처리기사",
+      "issuer": "한국산업인력공단",
+      "year": "2020"
+    }
+  ]
+}
+
