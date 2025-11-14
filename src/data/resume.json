@@ -1,54 +1,124 @@
 {
   "experience": [
     {
-      "company": "테크스타트업",
-      "role": "Frontend Engineer",
-      "period": "2023.03 - 현재",
-      "summary": "B2B SaaS 제품의 핵심 프론트엔드 기능을 설계하고 운영합니다.",
+      "company": "한양대학교 지능 시스템 연구실",
+      "role": "학부 연구생",
+      "period": "2025.01 - 2025.04",
+      "summary": "patch 기반 세포 조직 이미지 분류 모델 개발",
       "achievements": [
-        "제품 온보딩 플로우 리뉴얼로 이탈률 20% 감소",
-        "디자인 시스템 구축으로 UI 컴포넌트 재사용률 60% 증가",
-        "웹 접근성 점수 WCAG 2.1 AA 기준 충족"
+        "CNN 기반 조직 영역 경계선 추출 모델 개발",
+        "CNN 기반 조직 내 암세포 전이 영역 분류 모델 개발"
       ]
     },
     {
-      "company": "데이터 플랫폼 기업",
-      "role": "Frontend Developer",
-      "period": "2021.01 - 2023.02",
-      "summary": "데이터 시각화 플랫폼 프론트엔드를 담당하며 사용자 경험을 개선했습니다.",
+      "company": "한양대학교 인공지능 동아리 HAI",
+      "role": "동아리 부원",
+      "period": "2022.03 - 2022.12",
+      "summary": "tensorflow를 이용한 이미지 경계선 추출 모델 개발 및 배포",
       "achievements": [
-        "대용량 데이터 테이블 렌더링 최적화로 로딩 시간 50% 단축",
-        "고객 맞춤형 리포트 빌더 기능 출시, 월간 사용량 3배 증가"
+        "학습 데이터 전처리 및 가공",
+        "모델 학습 및 평가",
+        "모델 배포 및 사용"
       ]
     }
   ],
   "education": [
     {
-      "school": "서울대학교",
-      "degree": "컴퓨터공학과 학사",
-      "period": "2015 - 2020"
-    }
-  ],
-  "skills": [
-    {
-      "category": "Frontend",
-      "items": ["React", "TypeScript", "Vite", "Next.js", "Redux Toolkit"]
-    },
-    {
-      "category": "UI/UX",
-      "items": ["Design System", "Storybook", "Figma"]
-    },
-    {
-      "category": "Tooling & DevOps",
-      "items": ["GitHub Actions", "ESLint", "Testing Library", "Playwright"]
+      "school": "한양대학교",
+      "degree": "컴퓨터 소프트웨어 학부 전공 (3학년 재학)",
+      "period": "2022.03 - 현재",
+      "gpa": "4.32 / 4.5",
+      "grades": {
+        "2022-1": {
+          "semester": "2022 1학기",
+          "subjects": [
+            { "code": "CUL0005", "name": "말과글", "credits": 3, "score": 96, "grade": "A+", "gpa": 4.5 },
+            { "code": "CUL3011", "name": "일반물리학및실험1", "credits": 4, "score": 97, "grade": "A+", "gpa": 4.5, "highlight": true  },
+            { "code": "GEN2052", "name": "미분적분학1", "credits": 3, "score": 98, "grade": "A+", "gpa": 4.5, "highlight": true  },
+            { "code": "GEN4091", "name": "과학기술의철학적이해", "credits": 3, "score": 89, "grade": "B+", "gpa": 3.5 },
+            { "code": "GEN5029", "name": "커리어개발Ⅰ:취.창업진로로드맵", "credits": 1, "score": 95, "grade": "A+", "gpa": 4.5 },
+            { "code": "ITE1014", "name": "소프트웨어입문설계", "credits": 3, "score": 99.8, "grade": "A+", "gpa": 4.5 },
+            { "code": "SYH0001", "name": "사랑의실천1(한양나눔)", "credits": 2, "score": 99, "grade": "P", "gpa": 0, "passFail": true }
+          ],
+          "summary": { "subjects": 7, "credits": 19, "earnedCredits": 19, "semesterGpa": 4.32, "cumulativeGpa": 4.32 }
+        },
+        "2022-2": {
+          "semester": "2022 2학기",
+          "subjects": [
+            { "code": "CUL1117", "name": "Introduction to Digital Photography", "credits": 2, "score": 92, "grade": "A0", "gpa": 4.0 },
+            { "code": "CUL6056", "name": "교양웨이트트레이닝", "credits": 2, "score": 82, "grade": "P", "gpa": 0, "passFail": true },
+            { "code": "GEN2053", "name": "미분적분학2", "credits": 3, "score": 93, "grade": "A0", "gpa": 4.0, "highlight": true  },
+            { "code": "GEN2078", "name": "연극의이해", "credits": 2, "score": 91, "grade": "A0", "gpa": 4.0 },
+            { "code": "ITE1015", "name": "창의적소프트웨어프로그래밍", "credits": 4, "score": 92, "grade": "A0", "gpa": 4.0 },
+            { "code": "MAT2003", "name": "선형대수", "credits": 3, "score": 98, "grade": "A+", "gpa": 4.5, "highlight": true  },
+            { "code": "MAT2020", "name": "이산수학", "credits": 3, "score": 100, "grade": "A+", "gpa": 4.5, "highlight": true  }
+          ],
+          "summary": { "subjects": 7, "credits": 19, "earnedCredits": 19, "semesterGpa": 4.18, "cumulativeGpa": 4.25 }
+        },
+        "2023-군1": {
+          "semester": "2023 군e러닝1학기",
+          "subjects": [
+            { "code": "GEN6023", "name": "상상과창조", "credits": 3, "score": 97.6, "grade": "A+", "gpa": 4.5 }
+          ],
+          "summary": { "subjects": 1, "credits": 3, "earnedCredits": 3, "semesterGpa": 0, "cumulativeGpa": 4.27 }
+        },
+        "2023-군2": {
+          "semester": "2023 군e러닝2학기",
+          "subjects": [
+            { "code": "SYB9032", "name": "문화콘텐츠마케팅전략의수립과집행", "credits": 3, "score": 96.4, "grade": "A+", "gpa": 4.5 }
+          ],
+          "summary": { "subjects": 1, "credits": 3, "earnedCredits": 3, "semesterGpa": 0, "cumulativeGpa": 4.29 }
+        },
+        "2024-여름": {
+          "semester": "2024 여름계절학기",
+          "subjects": [
+            { "code": "GEN6032", "name": "전문학술영어", "credits": 3, "score": 96, "grade": "A+", "gpa": 4.5 }
+          ],
+          "summary": { "subjects": 1, "credits": 3, "earnedCredits": 3, "semesterGpa": 4.5, "cumulativeGpa": 4.3 }
+        },
+        "2024-2": {
+          "semester": "2024 2학기",
+          "subjects": [
+            { "code": "CLS1006", "name": "예술클래식:천재와광기", "credits": 3, "score": 97, "grade": "A+", "gpa": 4.5 },
+            { "code": "CSE4007", "name": "인공지능", "credits": 3, "score": 95, "grade": "A+", "gpa": 4.5 },
+            { "code": "CSE4009", "name": "시스템프로그래밍", "credits": 3, "score": 93, "grade": "A0", "gpa": 4.0 },
+            { "code": "ENE4019", "name": "컴퓨터네트워크", "credits": 3, "score": 99.4, "grade": "A+", "gpa": 4.5 },
+            { "code": "ENE4041", "name": "마이크로프로세서응용", "credits": 3, "score": 85, "grade": "B+", "gpa": 3.5 },
+            { "code": "ITE2039", "name": "알고리즘및문제해결기법", "credits": 3, "score": 90.79, "grade": "A0", "gpa": 4.0 },
+            { "code": "SYH0002", "name": "사랑의실천2(스마트커뮤니케이션)", "credits": 2, "score": 98, "grade": "P", "gpa": 0, "passFail": true }
+          ],
+          "summary": { "subjects": 7, "credits": 20, "earnedCredits": 20, "semesterGpa": 4.17, "cumulativeGpa": 4.26 }
+        },
+        "2024-겨울": {
+          "semester": "2024 겨울계절학기",
+          "subjects": [
+            { "code": "MAT2017", "name": "확률통계론", "credits": 3, "score": 100, "grade": "A+", "gpa": 4.5, "highlight": true  }
+          ],
+          "summary": { "subjects": 1, "credits": 3, "earnedCredits": 3, "semesterGpa": 4.5, "cumulativeGpa": 4.27 }
+        },
+        "2025-1": {
+          "semester": "2025 1학기",
+          "subjects": [
+            { "code": "CSE4020", "name": "컴퓨터그래픽스", "credits": 3, "score": 100, "grade": "A+", "gpa": 4.5, "highlight": true },
+            { "code": "ELE3021", "name": "운영체제", "credits": 3, "score": 100, "grade": "A+", "gpa": 4.5 },
+            { "code": "ITE2015", "name": "디지털논리", "credits": 3, "score": 100, "grade": "A+", "gpa": 4.5 },
+            { "code": "ITE2031", "name": "컴퓨터구조론", "credits": 3, "score": 95, "grade": "A+", "gpa": 4.5 },
+            { "code": "ITE4005", "name": "데이터사이언스", "credits": 3, "score": 96, "grade": "A+", "gpa": 4.5 }
+          ],
+          "summary": { "subjects": 5, "credits": 15, "earnedCredits": 15, "semesterGpa": 4.5, "cumulativeGpa": 4.32 }
+        },
+        "2025-여름": {
+          "semester": "2025 여름계절학기",
+          "subjects": [
+            { "code": "GEN4079", "name": "사회봉사", "credits": 1, "score": 90, "grade": "P", "gpa": 0, "passFail": true }
+          ],
+          "summary": { "subjects": 1, "credits": 1, "earnedCredits": 1, "semesterGpa": 0, "cumulativeGpa": 4.32 }
+        }
+      }
     }
   ],
   "certifications": [
-    {
-      "name": "정보처리기사",
-      "issuer": "한국산업인력공단",
-      "year": "2020"
-    }
+
   ]
 }
 

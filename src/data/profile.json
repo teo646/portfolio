@@ -1,12 +1,14 @@
 {
   "name": "최태영",
-  "headline": "Frontend Engineer",
-  "subheadline": "사용자 경험과 데이터 기반 설계를 모두 생각하는 개발자",
+  "image": "./media/profile.jpg",
+  "belong": "한양대학교 컴퓨터 소프트웨어 학부",
+  "headline": "Simulation & Computational Art",
+  "subheadline": "시뮬레이션을 통한 예술적 표현",
   "location": "Seoul, Republic of Korea",
   "summary": [
-    "React, TypeScript, Vite 중심의 프론트엔드 개발 경험",
-    "데이터 시각화와 디자인 시스템 구축에 관심이 많습니다.",
-    "협업을 통한 제품 개선과 사용자 피드백 분석에 익숙합니다."
+    "Python, PyTorch, OpenGL을 활용해 전산유체역학(CFD) 기반의 시뮬레이션을 연구하고 있습니다.",
+    "연기와 폭발 등 유체 현상을 시각화하고, 이를 종이에 옮기는 작업을 진행 중입니다.",
+    "물리와 예술이 만나는 지점을 탐구합니다."
   ],
   "contacts": [
     {
@@ -20,9 +22,9 @@
       "url": "https://github.com/teo646"
     },
     {
-      "type": "LinkedIn",
-      "label": "linkedin.com/in/username",
-      "url": "https://linkedin.com/in/username"
+      "type": "Instagram",
+      "label": "instagram.com/ttyu0529",
+      "url": "https://www.instagram.com/ttyu0529/"
     }
   ]
 }

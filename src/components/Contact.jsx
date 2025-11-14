@@ -4,11 +4,8 @@ export default function Contact({ contacts }) {
   return (
     <section className="section" id="contact">
       <div className="section__header">
-        <p className="section__eyebrow">Connect</p>
+        <p className="section__eyebrow">Contact</p>
         <h2 className="section__title">연락하기</h2>
-        <p className="section__description">
-          새로운 연락처가 생기면 `src/data/profile.json`의 `contacts` 배열에 추가하세요.
-        </p>
       </div>
 
       <div className="contact-card">

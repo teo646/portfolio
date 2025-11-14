@@ -1,6 +1,6 @@
 # 포트폴리오 웹사이트 (React + Vite)
 
-JSON 데이터만 수정하면 새로운 프로젝트와 경력 정보를 빠르게 반영할 수 있는 데이터 기반 포트폴리오입니다. GitHub Pages 같은 정적 호스팅 환경에서 바로 배포할 수 있도록 구성했습니다.
+JSON 데이터만 수정하면 새로운 프로젝트와 경력 정보를 빠르게 반영할 수 있는 데이터 기반 포트폴리오입니다. 시뮬레이션·컴퓨테이셔널 아트 작업을 강조하는 다크톤 UI와 미디어 카드 레이아웃을 기본으로 제공합니다.
 
 ## 시작하기
 
@@ -13,19 +13,38 @@ npm run dev
 
 ## 데이터 구조
 
-- `src/data/profile.json`: 이름, 타이틀, 소개 요약, 연락처 정보를 관리합니다.
-- `src/data/projects.json`: 프로젝트 카드 목록을 정의합니다. 항목을 추가하거나 삭제하면 UI가 자동으로 갱신됩니다.
-- `src/data/resume.json`: 경력(`experience`), 학력(`education`), 기술 스택(`skills`), 자격증(`certifications`)을 정의합니다.
+- `src/data/profile.json`: 이름, 헤드라인, 요약 문장, 위치 정보, 연락처 링크를 정의합니다.
+- `src/data/projects.json`: 프로젝트 카드 목록을 정의합니다. `media` 배열을 통해 이미지(`type: "image"`), 비디오(`"video"`), 임베드(`"iframe"`)를 연결할 수 있습니다.
+- `src/data/resume.json`: 경력(`experience`), 학력(`education`), 자격증(`certifications`)을 관리합니다.
 
-JSON 스키마는 직관적으로 구성되어 있으므로 텍스트 에디터에서 항목을 복사·붙여넣기만 해도 쉽게 업데이트할 수 있습니다.
+프로젝트 미디어 파일은 `public/media/` 폴더에 저장하거나 외부 URL을 사용할 수 있습니다. 예시는 다음과 같습니다.
+
+```jsonc
+{
+  "title": "Volumetric Smoke Studies",
+  "media": [
+    {
+      "type": "video",
+      "src": "https://example.com/video.mp4",
+      "poster": "/media/volumetric-smoke.svg",
+      "alt": "Volumetric smoke simulation timelapse",
+      "caption": "GPU 기반 CFD 솔버를 활용한 연기 시뮬레이션"
+    }
+  ]
+}
+```
+
+필요한 항목을 복사·붙여넣어 수정하면 UI가 즉시 반영됩니다.
 
 ## 섹션 구성
 
-- **Hero**: 이름, 헤드라인, 요약 문장을 강조합니다.
-- **Projects**: 프로젝트 카드형 목록과 기술 스택 태그를 보여줍니다.
-- **Experience**: 타임라인 형태로 경력과 주요 성과를 나타냅니다.
-- **Skills / Education / Certifications**: 카테고리별 기술, 학력, 자격 정보를 정리합니다.
-- **Contact**: 연락처를 버튼 형태로 제공합니다.
+- **Hero**: 이름, 헤드라인, 요약을 네온 글로우 배경과 함께 노출합니다.
+- **Projects**: 미디어(이미지/영상/임베드)와 하이라이트, 기술 스택을 카드 형태로 보여줍니다.
+- **Experience**: 타임라인 레이아웃으로 연구 및 인턴 경험을 정리합니다.
+- **Education / Certifications**: 학력과 자격 정보를 정리합니다.
+- **Contact**: 이메일, GitHub, SNS 등 연락처를 버튼 카드로 강조합니다.
+
+테마 컬러나 레이아웃을 변경하고 싶다면 `src/App.css`, `src/index.css`를 조정하면 됩니다.
 
 ## 빌드 & 배포
 

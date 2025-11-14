@@ -1,4 +1,5 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import profile from './data/profile.json'
 import projects from './data/projects.json'
@@ -6,26 +7,42 @@ import resume from './data/resume.json'
 
 import Contact from './components/Contact.jsx'
 import Education from './components/Education.jsx'
+import EducationDetail from './components/EducationDetail.jsx'
 import Experience from './components/Experience.jsx'
+import ExperienceDetail from './components/ExperienceDetail.jsx'
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
-import Skills from './components/Skills.jsx'
+import ProjectDetail from './components/ProjectDetail.jsx'
 
-function App() {
+function Home() {
   return (
-    <div className="page">
+    <>
       <Hero profile={profile} />
       <main className="main">
         <Projects projects={projects} />
         <Experience experience={resume.experience} />
-        <Skills skills={resume.skills} />
         <Education education={resume.education} certifications={resume.certifications} />
         <Contact contacts={profile.contacts} />
       </main>
       <footer className="footer">
-        <p>© {new Date().getFullYear()} {profile.name}. 데이터 파일을 수정해 포트폴리오를 업데이트하세요.</p>
+        <p>© {new Date().getFullYear()} {profile.belong} {profile.name}.</p>
       </footer>
-    </div>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router basename="/portfolio">
+      <div className="page">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project/:projectTitle" element={<ProjectDetail projects={projects} />} />
+          <Route path="/experience/:experienceId" element={<ExperienceDetail experience={resume.experience} />} />
+          <Route path="/education/:schoolName" element={<EducationDetail education={resume.education} />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Hero({ profile }) {
-  const { name, headline, subheadline, location, summary } = profile
+  const { name, headline, subheadline, summary } = profile
 
   return (
     <header className="section hero">
@@ -10,7 +10,6 @@ export default function Hero({ profile }) {
         <h1 className="hero__title">{name}</h1>
         <p className="hero__headline">{headline}</p>
         {subheadline && <p className="hero__subheadline">{subheadline}</p>}
-        <p className="hero__location">{location}</p>
 
         <ul className="hero__summary">
           {summary.map((item) => (
@@ -27,7 +26,6 @@ Hero.propTypes = {
     name: PropTypes.string.isRequired,
     headline: PropTypes.string.isRequired,
     subheadline: PropTypes.string,
-    location: PropTypes.string.isRequired,
     summary: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 }
