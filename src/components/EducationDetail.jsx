@@ -27,13 +27,9 @@ export default function EducationDetail({ education }) {
     )
   }
 
-  // grades가 있는 경우 학기별로 정렬
+  // grades가 있는 경우 역순(최신 학기 우선)으로 정렬
   const gradeEntries = school.grades ? Object.entries(school.grades) : []
-  // 최신 학기부터 보여주기 위해 역순 정렬
-  const sortedGrades = gradeEntries.sort((a, b) => {
-    // 키를 기준으로 정렬 (2025가 최신)
-    return b[0].localeCompare(a[0])
-  })
+  const sortedGrades = gradeEntries.slice().reverse()
 
   return (
     <div className="page">
@@ -66,6 +62,12 @@ export default function EducationDetail({ education }) {
                     
                     <div className="grade-table">
                       <table className="grades-table">
+                        <colgroup>
+                          <col className="grade-col-name" />
+                          <col className="grade-col-small" />
+                          <col className="grade-col-small" />
+                          <col className="grade-col-small" />
+                        </colgroup>
                         <thead>
                           <tr>
                             <th>과목명</th>
@@ -78,7 +80,7 @@ export default function EducationDetail({ education }) {
                           {semesterData.subjects.map((subject, index) => (
                             <tr 
                               key={index} 
-                              className={`${subject.passFail ? 'grade-row--passfail' : ''} ${subject.highlight ? 'grade-row--highlight' : ''}`}
+                              className={subject.highlight ? 'grade-row--highlight' : ''}
                             >
                               <td className="grade-name">{subject.name}</td>
                               <td className="grade-credits">{subject.credits}</td>

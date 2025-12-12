@@ -1,6 +1,116 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
+const resolveAssetPath = (src) => {
+  if (!src) return src
+  if (/^https?:\/\//i.test(src)) return src
+
+  const base = import.meta.env.BASE_URL || '/'
+  const baseWithSlash = base.endsWith('/') ? base : `${base}/`
+  const baseWithoutSlash = baseWithSlash.endsWith('/') ? baseWithSlash.slice(0, -1) : baseWithSlash
+
+  if (src.startsWith('/')) {
+    return `${baseWithoutSlash}${src}`
+  }
+
+  const cleanSrc = src.startsWith('./') ? src.slice(2) : src.replace(/^\/+/, '')
+  return `${baseWithSlash}${cleanSrc}`
+}
+
+function ExperienceMediaCarousel({ media, title }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeItem = media[activeIndex]
+  const hasMultiple = media.length > 1
+
+  const goTo = (nextIndex) => {
+    const total = media.length
+    const normalized = (nextIndex + total) % total
+    setActiveIndex(normalized)
+  }
+
+  if (!activeItem) return null
+
+  const renderMedia = (item) => {
+    if (item.type === 'image') {
+      const imageSrc = resolveAssetPath(item.src)
+      return <img src={imageSrc} alt={item.alt || `${title} 미디어`} loading="lazy" />
+    }
+
+    if (item.type === 'video') {
+      const videoSrc = resolveAssetPath(item.src)
+      const posterSrc = item.poster ? resolveAssetPath(item.poster) : item.poster
+
+      return (
+        <video
+          controls
+          playsInline
+          poster={posterSrc}
+          preload="metadata"
+          className="media-frame__video"
+        >
+          <source src={videoSrc} type={item.mimeType || 'video/mp4'} />
+          브라우저가 비디오 태그를 지원하지 않습니다.
+        </video>
+      )
+    }
+
+    if (item.type === 'iframe') {
+      return (
+        <iframe
+          src={item.src}
+          title={item.alt || `${title} 미디어`}
+          loading="lazy"
+          allow={item.allow || 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'}
+          allowFullScreen
+        />
+      )
+    }
+
+    return null
+  }
+
+  return (
+    <div className="media-carousel">
+      <figure className="media-frame media-frame--detail-square">
+        {renderMedia(activeItem)}
+        {(activeItem.caption || activeItem.alt) && (
+          <figcaption className="media-carousel__caption">
+            {activeItem.caption || activeItem.alt}
+          </figcaption>
+        )}
+      </figure>
+
+      {hasMultiple && (
+        <>
+          <div className="media-carousel__controls" aria-hidden="true">
+            <button
+              type="button"
+              className="media-carousel__button media-carousel__button--prev"
+              onClick={() => goTo(activeIndex - 1)}
+              aria-label="이전 미디어 보기"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              type="button"
+              className="media-carousel__button media-carousel__button--next"
+              onClick={() => goTo(activeIndex + 1)}
+              aria-label="다음 미디어 보기"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+          <div className="media-carousel__counter">
+            {activeIndex + 1}
+            <span className="media-carousel__counter-divider">/</span>
+            {media.length}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
 
 export default function ExperienceDetail({ experience }) {
   const { experienceId } = useParams()
@@ -52,6 +162,10 @@ export default function ExperienceDetail({ experience }) {
               <p className="experience-detail__company">{experienceItem.company}</p>
             </div>
 
+            {experienceItem.media?.length > 0 && (
+              <ExperienceMediaCarousel media={experienceItem.media} title={experienceItem.company} />
+            )}
+
             <div className="experience-detail__content">
               {experienceItem.summary && (
                 <div className="experience-detail__summary">
@@ -86,7 +200,33 @@ ExperienceDetail.propTypes = {
       period: PropTypes.string.isRequired,
       summary: PropTypes.string,
       achievements: PropTypes.arrayOf(PropTypes.string),
+      media: PropTypes.arrayOf(
+        PropTypes.shape({
+          type: PropTypes.oneOf(['image', 'video', 'iframe']).isRequired,
+          src: PropTypes.string.isRequired,
+          alt: PropTypes.string,
+          caption: PropTypes.string,
+          poster: PropTypes.string,
+          mimeType: PropTypes.string,
+          allow: PropTypes.string,
+        })
+      ),
     })
   ).isRequired,
+}
+
+ExperienceMediaCarousel.propTypes = {
+  media: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.oneOf(['image', 'video', 'iframe']).isRequired,
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string,
+      caption: PropTypes.string,
+      poster: PropTypes.string,
+      mimeType: PropTypes.string,
+      allow: PropTypes.string,
+    })
+  ).isRequired,
+  title: PropTypes.string.isRequired,
 }
 

@@ -823,6 +823,14 @@
   background: var(--color-surface-alt);
 }
 
+.grades-table col.grade-col-name {
+  width: 55%;
+}
+
+.grades-table col.grade-col-small {
+  width: 15%;
+}
+
 .grades-table th {
   padding: 1rem 0.75rem;
   text-align: left;
@@ -855,14 +863,11 @@
   border-bottom: none;
 }
 
-.grade-row--passfail {
-  opacity: 0.7;
-}
-
 .grade-row--highlight td {
   text-decoration: underline;
   text-decoration-color: var(--color-text-primary);
   text-underline-offset: 0.2em;
+  font-weight: 600;
 }
 
 .grade-code {
@@ -885,8 +890,13 @@
 
 .grade-grade {
   text-align: center;
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.grade-row--highlight .grade-grade {
+  font-weight: 700;
+  color: var(--color-text-primary);
 }
 
 .grades-table tfoot td {

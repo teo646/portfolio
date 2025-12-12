@@ -4,21 +4,55 @@
       "company": "한양대학교 지능 시스템 연구실",
       "role": "학부 연구생",
       "period": "2025.01 - 2025.04",
-      "summary": "patch 기반 세포 조직 이미지 분류 모델 개발",
+      "summary": "한양대학교 지능시스템 연구실에서 조직(tissue) 및 종양(tumor) 세그멘테이션 모델을 개발하는 인턴십을 수행했습니다. Whole Slide Image를 패치 단위로 분할한 뒤, 논문 기반 구조를 참고해 조직 마스크를 생성하는 tissue segmentation 모델을 구현했고, 이후 Camelyon17 데이터셋을 활용해 U-Net 기반의 tumor segmentation 모델을 개발했습니다. 초대형 이미지를 다루는 과정에서 작은 단위부터 점진적으로 검증하는 개발 방식의 중요성을 체득했으며, 데이터 전처리·관리·검증 역량 또한 향상되었습니다.",
       "achievements": [
-        "CNN 기반 조직 영역 경계선 추출 모델 개발",
-        "CNN 기반 조직 내 암세포 전이 영역 분류 모델 개발"
+        "Tumor segmentation 모델에서 검증 패치 기준 97.9%, 테스트 패치 기준 95.9%의 정확도를 달성하며 높은 신뢰도의 암 전이 영역 분할 모델을 구축",
+        "대용량 Whole Slide Image 처리 파이프라인 구축"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "./media/experiences/지능_시스템_연구실/1.png",
+          "alt": "tissue segmentation"
+        },
+        {
+          "type": "image",
+          "src": "./media/experiences/지능_시스템_연구실/2.png",
+          "alt": "tumor classification"
+        }
       ]
     },
     {
       "company": "한양대학교 인공지능 동아리 HAI",
       "role": "동아리 부원",
       "period": "2022.03 - 2022.12",
-      "summary": "tensorflow를 이용한 이미지 경계선 추출 모델 개발 및 배포",
+      "summary": "한양대학교 인공지능 동아리 HAI에서 멘토링과 스터디를 통해 머신러닝·딥러닝의 기초를 학습하고, 다양한 AI 모델을 실제 데이터에 적용하기 위한 파이프라인을 구성하는 경험을 쌓았습니다. 팀원들과 역할을 분담해 협업하며 버전 관리와 코드 리뷰 등 실무에 가까운 개발 문화를 익혔습니다. 이러한 활동을 통해 모델 적용 능력뿐 아니라 프로젝트 전반을 함께 이끌어가는 협업 역량을 강화했습니다.",
       "achievements": [
-        "학습 데이터 전처리 및 가공",
-        "모델 학습 및 평가",
-        "모델 배포 및 사용"
+        "인공지능 기초 학습",
+        "영상 처리 및 컴퓨터 비전 기반 프로젝트를 수행하며 데이터 처리 경험을 쌓음",
+        "TensorFlow 및 Detectron2를 사용해 segmentation·mask propagation 파이프라인 구축",
+        "웹 서비스 기능을 위한 유저 인터페이스 구현",
+        "공동 작업을 위한 git 협업 경험을 쌓음"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "./media/experiences/HAI/2.jpg",
+          "alt": "mask segmentation",
+          "caption": "mask segmentation"
+        },
+        {
+          "type": "image",
+          "src": "./media/experiences/HAI/1.jpg",
+          "alt": "mask selection",
+          "caption": "mask selection"
+        },
+        {
+          "type": "iframe",
+          "src": "https://www.youtube.com/embed/S3yjPzAUXH4",
+          "alt": "mask propagation",
+          "caption": "mask propagation"
+        }
       ]
     }
   ],
@@ -58,7 +92,7 @@
         "2023-군1": {
           "semester": "2023 군e러닝1학기",
           "subjects": [
-            { "code": "GEN6023", "name": "상상과창조", "credits": 3, "score": 97.6, "grade": "A+", "gpa": 4.5 }
+            { "code": "GEN6023", "name": "상상과창조", "credits": 3, "score": 97.6, "grade": "A+", "gpa": 4.5, "highlight": true   }
           ],
           "summary": { "subjects": 1, "credits": 3, "earnedCredits": 3, "semesterGpa": 0, "cumulativeGpa": 4.27 }
         },
@@ -79,7 +113,7 @@
         "2024-2": {
           "semester": "2024 2학기",
           "subjects": [
-            { "code": "CLS1006", "name": "예술클래식:천재와광기", "credits": 3, "score": 97, "grade": "A+", "gpa": 4.5 },
+            { "code": "CLS1006", "name": "예술클래식:천재와광기", "credits": 3, "score": 97, "grade": "A+", "gpa": 4.5, "highlight": true },
             { "code": "CSE4007", "name": "인공지능", "credits": 3, "score": 95, "grade": "A+", "gpa": 4.5 },
             { "code": "CSE4009", "name": "시스템프로그래밍", "credits": 3, "score": 93, "grade": "A0", "gpa": 4.0 },
             { "code": "ENE4019", "name": "컴퓨터네트워크", "credits": 3, "score": 99.4, "grade": "A+", "gpa": 4.5 },
